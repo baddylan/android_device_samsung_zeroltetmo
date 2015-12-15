@@ -106,6 +106,9 @@ PRODUCT_COPY_FILES += \
 # Libstlport
 PRODUCT_PACKAGES += \
     libstlport
+    
+PRODUCT_PACKAGES += \
+    libion
 
 # Lights
 PRODUCT_PACKAGES += \
