@@ -118,7 +118,28 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
+    
+# Audio codecs
+PRODUCT_PACKAGES += \
+    libOMX.Exynos.AAC.Decoder \
+    libOMX.Exynos.FLAC.Decoder \
+    libOMX.Exynos.MP3.Decoder \
+    libOMX.Exynos.WMA.Encoder
 
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    libExynosOMX_Core
+
+#Video codecs
+PRODUCT_PACKAGES += \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.WMV.Decoder
+    
+    
 # NFC
 PRODUCT_PACKAGES += \
     libnfc-nci \
