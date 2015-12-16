@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-TARGET_OTA_ASSERT_DEVICE := zeroflteskt,zerofltektt,zerofltelgt,zeroflte,zerofltexx
+TARGET_OTA_ASSERT_DEVICE := zeroltetmo
 
-ZEROFLTE_PATH := device/samsung/zerofltexx
+ZEROFLTE_PATH := device/samsung/zeroltetmo
 
 BOARD_VENDOR := samsung
 
@@ -74,11 +74,13 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+BOARD_CUSTOM_BOOTIMG_MK := $(ZEROFLTE_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x10008000 --ramdisk_offset 0x11000000 --tags_offset 0x10000100 --dt $(ZEROFLTE_PATH)/dtb.img
-TARGET_KERNEL_CONFIG := cm_zerofltexx_defconfig
+BOARD_KERNEL_SEPARATED_DT := true
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x10008000 --ramdisk_offset 0x11000000 --tags_offset 0x10000100
+TARGET_KERNEL_CONFIG := cm_zeroltetmo_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/zeroflte
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
@@ -94,7 +96,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 29360128
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 35651584
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3656552448
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3500000000
 #BOARD_USERDATAIMAGE_PARTITION_SIZE := 59183980544 #64GB
 
 # Recovery
@@ -138,4 +140,4 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/etc/wifi/bcmdhd_apsta.bin"
 WIFI_BAND                        := 802_11_ABG
 
 # inherit from the proprietary version
--include vendor/samsung/zerofltexx/BoardConfigVendor.mk
+-include vendor/samsung/zeroltetmo/BoardConfigVendor.mk
