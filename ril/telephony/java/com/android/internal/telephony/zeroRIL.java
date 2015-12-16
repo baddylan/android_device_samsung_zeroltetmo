@@ -44,13 +44,13 @@ public class zeroRIL extends RIL implements CommandsInterface {
     public zeroRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
-        mQANElements = 6;
+        mQANElements = 5;
     }
 
     public zeroRIL(Context context, int networkMode,
             int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
-        mQANElements = 6;
+        mQANElements = 5;
     }
 
     @Override
