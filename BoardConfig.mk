@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-TARGET_OTA_ASSERT_DEVICE := zeroltetmo, zeroflte
+TARGET_OTA_ASSERT_DEVICE := zeroltetmo,zeroflte
 
 ZEROFLTE_PATH := device/samsung/zeroltetmo
 
