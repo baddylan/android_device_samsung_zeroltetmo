@@ -54,6 +54,12 @@ void vendor_load_properties()
         property_set("ro.build.description", "zeroflteskt-user 5.1.1 LRX22G G925TUVU3DOJ7 release-keys");
         property_set("ro.product.model", "SM-G925T");
         property_set("ro.product.device", "zeroltetmo");
+    } else {
+        /* zerofltexx */
+        property_set("ro.build.fingerprint", "samsung/zerofltexx/zerofltexx:5.0.2/LRX22G/G920FKSU1AOF5:user/release-keys");
+        property_set("ro.build.description", "zerofltexx-user 5.0.2 LRX22G G920FKSU1AOF5 release-keys");
+        property_set("ro.product.model", "SM-G920F");
+        property_set("ro.product.device", "zerofltexx");
     }
 
     property_get("ro.product.device", device);
