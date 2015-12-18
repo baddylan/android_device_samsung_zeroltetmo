@@ -78,7 +78,6 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x10008000 --ramdisk_offset 0x11000000 --tags_offset 0x10000100 --dt $(ZEROFLTE_PATH)/dtb.img
 TARGET_KERNEL_CONFIG := cm_zeroltetmo_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/zeroflte
